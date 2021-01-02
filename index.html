@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Fusion</title>
+    <link rel="stylesheet" href="stylesheet.css">
+  </head>
+  <body>
+
+<div class="tag_list" id="tag_lists">
+  <form name="zzzzzzz">
+  <input type="button" value="1st" onclick="funcbtn1()">
+</form>
+</div>
+
+<div class="text_box">
+  <p id="first_text_final">
+    ぼくは　エーアイの　<span id="me">ご</span>ろう　だ。
+    <br>きょうは　この　そうちを　はじめて　つかう　ひ！
+    <br>きみが　しようしゃ　だいいちごうに
+    <br><span id="pull">ばっ</span>てき　されたんだね。<br>
+    <br>でも　まずは　きみが　この　そうちを　ちゃんと<br>
+    つかえるか　テストをするよ！<br>
+    <br>10まいの　パネルに　かかれた　なぞを　といて
+    <br>しじされた　もじを　<span id="pick">ひろ</span>い　こたえを　にゅうりょくしてね！<br>
+  </p>
+
+  <p id="second_text_final">
+    すごい！　よわ<span id="sound">ね</span>を　はかずに　こたえを　だせた　みたいだね。<br>
+    <br>よし！　そしたら　きみに「FUSION MACHINE」の
+    <br>とりあつかいせつ<span id="light">めい</span>しょを　し<span id="give">きゅう</span>しよう！<br>
+    <br>とりあつかいせつ<span id="light">めい</span>しょを　しっかりと　<span id="read">よ</span>んでから
+    <br>じっさいに「sayパネル」と「sellパネル」を
+    <br>ボードに　おいて　FUSIONしてみよう！
+    <br>FUSION WORDは　えい<span id="language">ご</span>で　にゅうりょくしてね！<br>
+  </p>
+
+  <p id="third_text_final">
+    ぶじ FUSION できた　みたいだね！<br>
+    <br>FUSION したことで　ぼくのがめんに
+    <br>へんかが　おきたみたい！<br>
+    <br>このいきおいで　ためしていない
+    <br>ほかの　パターンで　FUSION しよう！
+  <br>
+  </p>
+
+  <p id="forth_text_final">
+    じゅうぶん　つかいこなしているね！<br>
+    <br>ぼくも　2かい　FUSION したよ！<br>
+    <br>そういえば　はかせから　てがみを　あずかっていたんだった。<br>
+
+    <br>このパネルの　ここを　きりはなすと
+    <br>あらたな　ふたつの　パネルが　できあがるぞ。<br>
+
+    <br>じゃあ　じっさいに　きりはなしてみよう！
+    <br>きりはなして　てにはいった　ふたつの　パネルの
+    <br>なぞの　こたえを　おしえて！
+    <br>
+  </p>
+
+  <p id="fifth_text_final">
+    なるほど！　その　ふたつの　パネルが　てに　はいったんだね！
+    <br>ん？てがみに　まだ　なにか　かいてあるみたい。<br>
+
+    <br>...ただし　あくよう　されないように
+    <br>「FUSION MACHINE」は　パネルの　きりはなしを　さっちして
+    <br>しょきかプログラムが　きどうする　せっていになっているから
+    <br>かってに　きりはなさないように！
+    <br>もし　きりはなして　しまったら
+    <br><span id="me">ご</span>ろうの　かんじの　[<span id="on">せつ</span><span id="continue">ぞく</span>]ボタンを　おせば
+    <br>しょきかを　とめることが　できるぞ！
+    <br>はかせより<br>
+
+    <br>たいへんだ！　しょきか　なんてしたら
+    <br>はかせに　おこられちゃうよ...
+    <br>
+    <input type="button" id="connection" value="せつぞく">
+  </p>
+</div>
+
+<div class="goal" id="goals">
+  <p class="first_goal">目的:10枚のパネルに書かれた謎を解こう！</p>
+</div>
+
+<div class="input_blanc" id="blnc">
+  <form name="first_check">
+  <input type="text" id="first_ans">
+  <input type="button" value="GO!" onclick="func1()"　autocomplete="off">
+  </form>
+</div>
+
+
+<!--
+<form name="fusion_machine">
+<input type="text" id="fusion_word" placeholder="FUSION WORD">
+<input type="button" value="GO!" onclick="func2()">
+</form>
+
+<form name="forth_check">
+<input type="text" id="forth_ans1">
+<input type="text" id="forth_ans2">
+<input type="button" value="GO!" onclick="func4()">
+</div>
+-->
+<!--
+        <div class="first" id="first">
+          <p>1st</p>
+
+          <div class="first_text" id="first_text">
+            <p>
+              ぼくは　エーアイの　ごろう　だ。
+              <br>きょうは　この　そうちを　はじめて　つかう　ひ！
+              <br>きみが　しようしゃ　だいいちごうに
+              <br>ばってき　されたんだね。<br>
+              <br>でも　まずは　きみが　この　そうちを　ちゃんと<br>
+              つかえるか　テストをするよ！<br>
+              <br>10まいの　パネルに　かかれた　なぞを　といて
+              <br>しじされた　もじを　ひろい　こたえを　にゅうりょくしてね！<br>
+            </p>
+          </div>
+
+          <form name="first_check">
+          <input type="text" id="first_ans">
+          <input type="button" value="GO!" onclick="func1()">
+          </form>
+
+          <p>目的:10枚のパネルに書かれた謎を解こう！</p>
+        </div>
+
+
+
+        <div class="second" id="second">
+        <p>2nd</p>
+
+        <div class="second_text" id="second_text">
+          <p>
+            すごい！　よわねを　はかずに　こたえを　だせた　みたいだね。<br>
+            <br>よし！　そしたら　きみに「FUSION MACHINE」の
+            <br>とりあつかいせつめいしょを　しきゅうしよう！<br>
+            <br>とりあつかいせつめいしょを　しっかりと　<span id="read">よ</span>んでから
+            <br>じっさいに「sayパネル」と「sellパネル」を
+            <br>ボードに　おいて　FUSIONしてみよう！
+            <br>FUSION WORDは　えいごで　にゅうりょくしてね！<br>
+          </p>
+        </div>
+
+        <div class="fusion_machine_box" id="fusion_machine_box">
+          <form name="fusion_machine">
+          <input type="text" id="fusion_word" placeholder="FUSION WORD">
+          <input type="button" value="GO!" onclick="func2()">
+          </form>
+          </div>
+
+        <p>目的:封筒を開けて、実際にFUSIONしてみよう！</p>
+        </div>
+
+
+
+         <div class="third" id="third">
+         <p>3rd</p>
+
+         <div class="third_text" id="third_text">
+           <p>
+             ぶじ FUSION できた　みたいだね！<br>
+             <br>FUSION したことで　ぼくのがめんに
+             <br>へんかが　おきたみたい！<br>
+             <br>このいきおいで　ためしていない
+             <br>ほかの　パターンで　FUSION しよう！
+          <br>
+           </p>
+         </div>
+
+         <p>目的:②、③のパターンでもFUSIONしてみよう！</p>
+
+         </div>
+
+
+
+        <div class="forth" id="forth">
+          <p>4th</p>
+
+          <div class="forth_text" id="forth_text">
+            <p>
+              じゅうぶん　つかいこなしているね！<br>
+              <br>ぼくも　2かい　FUSION したよ！<br>
+              <br>そういえば　はかせから　てがみを　あずかっていたんだった。<br>
+
+              <br>このパネルの　ここを　きりはなすと
+              <br>あらたな　ふたつの　パネルが　できあがるぞ。<br>
+
+              <br>じゃあ　じっさいに　きりはなしてみよう！
+              <br>きりはなして　てにはいった　ふたつの　パネルの
+              <br>なぞの　こたえを　おしえて！
+              <br>
+            </p>
+          </div>
+
+            <form name="forth_check">
+            <input type="text" id="forth_ans1">
+            <input type="text" id="forth_ans2">
+            <input type="button" value="GO!" onclick="func3()">
+            </form>
+
+          <p>目的:パネルを切って新しいパネルにしよう！</p>
+
+        </div>
+
+        <div class="fifth" id="fifth">
+            <p>5th</p>
+
+            <div class="fifth_text" id="fifth_text">
+              <p>
+                なるほど！　その　ふたつの　パネルが　てに　はいったんだね！
+                <br>ん？てがみに　まだ　なにか　かいてあるみたい。<br>
+
+                <br>...ただし　あくよう　されないように
+                <br>「FUSION MACHINE」は　パネルの　きりはなしを　さっちして
+                <br>しょきかプログラムが　きどうする　せっていになっているから
+                <br>かってに　きりはなさないように！
+                <br>もし　きりはなして　しまったら
+                <br>ごろうの　かんじの　[せつぞく]ボタンを　おせば
+                <br>しょきかを　とめることが　できるぞ！
+                <br>はかせより<br>
+
+                <br>たいへんだ！　しょきか　なんてしたら
+                <br>はかせに　おこられちゃうよ...
+                <br>
+              </p>
+              <input type="button" id="connection" value="せつぞく">
+            </div>
+
+            <p>目的:なんとかして初期化を阻止しよう！</p>
+-->
+<!--
+<div class="test" id="test_id">
+<form name="test_btn">
+<input type="button" value="テスト" onclick="functest()">
+</form>
+</div>
+-->
+<div id="secret"></div>
+<script src="system.js">
+</script>
+  </body>
+</html>
