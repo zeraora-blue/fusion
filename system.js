@@ -99,7 +99,7 @@ function func3(){
     }else{
       num_array2 = 1;
       alert('FUSIONせいこう！');
-      if(fusion_word == 'CRUSH'){
+      if(fusion_words == 'CRUSH'){
       document.getElementById('sound').innerHTML = '音';
       var list_reload = document.getElementById('preenter');
       list_reload.insertAdjacentHTML('beforeend', '<option value="CRUSH">');
