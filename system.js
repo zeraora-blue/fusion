@@ -88,7 +88,7 @@ function func3(){
   var num_array2 = 0;
   var num_array3 = 0;
   if(document.getElementById('sound').innerHTML == '音'){num_array2 += 1;}
-  if(document.getElementById('me').innerHTML == '吾'){num_array2 += 1;}
+  if(document.getElementById('me1').innerHTML == '吾'){num_array2 += 1;}
   if(document.getElementById('language').innerHTML == '語'){num_array3 += 1;}
 
   if(fusion_word_array1.indexOf(fusion_words) !== -1){
@@ -103,8 +103,9 @@ function func3(){
       document.getElementById('sound').innerHTML = '音';
       var list_reload = document.getElementById('preenter');
       list_reload.insertAdjacentHTML('beforeend', '<option value="CRUSH">');
-    }else{
-      document.getElementById('me').innerHTML = '吾';
+    }else if(fusion_words == 'LIGHT'){
+      document.getElementById('me1').innerHTML = '吾';
+      document.getElementById('me2').innerHTML = '吾';
       var list_reload = document.getElementById('preenter');
       list_reload.insertAdjacentHTML('beforeend', '<option value="LIGHT">');
     }
@@ -223,11 +224,12 @@ function func5(){
   }
 
   if(fusion_words == 'CRAFT'){
-    if(document.getElementById('light').innerHTML == '明'){
+    if(document.getElementById('light1').innerHTML == '明'){
     alert('すでにFUSIONした　たんごだね');
   }else{
     alert('FUSIONせいこう！');
-    document.getElementById('light').innerHTML = '明';
+    document.getElementById('light1').innerHTML = '明';
+    document.getElementById('light2').innerHTML = '明';
     var list_reload = document.getElementById('preenter1');
     list_reload.insertAdjacentHTML('beforeend', '<option value="CRAFT">');
   }
@@ -267,11 +269,12 @@ function func5(){
   }
 
   if(fusion_words == 'LIGHT'){
-    if(document.getElementById('me').innerHTML == '吾'){
+    if(document.getElementById('me1').innerHTML == '吾'){
     alert('すでにFUSIONした　たんごだね');
   }else{
     alert('FUSIONせいこう！');
-    document.getElementById('me').innerHTML = '吾'
+    document.getElementById('me1').innerHTML = '吾'
+    document.getElementById('me2').innerHTML = '吾'
     var list_reload = document.getElementById('preenter1');
     list_reload.insertAdjacentHTML('beforeend', '<option value="LIGHT">');
   }
