@@ -1,0 +1,37 @@
+#first_text_final{
+  opacity:1;
+  position:relative;
+}
+#second_text_final{
+  opacity:0;
+  position:relative;
+  top:-190pt;
+}
+#third_text_final{
+  opacity:0;
+  position:relative;
+  top:-361pt;
+}
+#forth_text_final{
+  opacity:0;
+  position:relative;
+  top:-494pt;
+}
+#fifth_text_final{
+  opacity:0;
+  position:relative;
+  top:-722pt;
+}
+#goals{
+  position:relative;
+  top:-700pt;
+}
+#blnc{
+  position:relative;
+  top:-700pt;
+}
+#secret{
+  opacity:0;
+  length:0pt;
+  width:0pt;
+}
