@@ -282,6 +282,16 @@ function func5(){
     list_reload.insertAdjacentHTML('beforeend', '<option value="LIGHT">');
   }
   }
+    if(fusion_words == 'GIANT'){
+    if(document.getElementById('like').innerHTML == '<b>如</b>'){
+    alert('すでにFUSIONした　たんごだね');
+  }else{
+    alert('FUSIONせいこう！');
+    document.getElementById('like').innerHTML = '<b>如</b>'
+    var list_reload = document.getElementById('preenter1');
+    list_reload.insertAdjacentHTML('beforeend', '<option value="GIANT">');
+  }
+  }
 
   if(fusion_words == 'FIGHT'){
     if(document.getElementById('language').innerHTML == '<b>語</b>'){
