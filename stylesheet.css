@@ -1,37 +1,30 @@
 #first_text_final{
   opacity:1;
-  position:relative;
+  font-size:15px;
 }
 #second_text_final{
   opacity:0;
-  position:relative;
-  top:-190pt;
+  font-size: 0px;
 }
 #third_text_final{
   opacity:0;
-  position:relative;
-  top:-361pt;
+    font-size: 0px;
 }
 #forth_text_final{
   opacity:0;
-  position:relative;
-  top:-494pt;
+    font-size: 0px;
 }
 #fifth_text_final{
   opacity:0;
-  position:relative;
-  top:-722pt;
+    font-size: 0px;
 }
 #goals{
-  position:relative;
-  top:-700pt;
 }
 #blnc{
-  position:relative;
-  top:-700pt;
 }
 #secret{
   opacity:0;
-  length:0pt;
+  height:0pt;
   width:0pt;
 }
+
