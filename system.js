@@ -11,16 +11,11 @@ function func1(){
   const first_anss = document.getElementById('first_ans').value;
   if(first_anss == first_ans_final){
     alert('せいかい！');
-    document.getElementById("first_text_final").style.opacity = 0 ;
-    document.getElementById("second_text_final").style.opacity = 1 ;
-    document.getElementById("third_text_final").style.opacity = 0 ;
-    document.getElementById("forth_text_final").style.opacity = 0 ;
-    document.getElementById("fifth_text_final").style.opacity = 0 ;
-    document.getElementById("first_text_final").style.fontSize = 0 ;
-    document.getElementById("second_text_final").style.fontSize = "15px";
-    document.getElementById("third_text_final").style.fontSize = 0 ;
-    document.getElementById("forth_text_final").style.fontSize = 0 ;
-    document.getElementById("fifth_text_final").style.fontSize = 0 ;
+    document.getElementById("first_text_final").style.display = "none" ;
+    document.getElementById("second_text_final").style.opacity = "block" ;
+    document.getElementById("third_text_final").style.opacity = "none" ;
+    document.getElementById("forth_text_final").style.opacity = "none" ;
+    document.getElementById("fifth_text_final").style.opacity = "none" ;
  document.getElementById('blnc').innerHTML = '<form name="fusion_machine" onsubmit="return abc()"><input type="text" id="fusion_word" placeholder="FUSION WORD" autocomplete="off"><input type="button" value="GO!" onclick="func2()"></form>';
  document.getElementById('tag_lists').innerHTML = '<form name="zzzzzzz"><input type="button" value="1st" onclick="funcbtn1()"><input type="button" value="2nd" onclick="funcbtn2()">';
  document.getElementById('goals').innerHTML='<p class="second_goal">目的:封筒を開けて、実際にFUSIONしてみよう！</p>';
@@ -39,16 +34,11 @@ function func2(){
     else{
     alert('FUSIONせいこう！');
     document.getElementById('read').innerHTML = '<b>読</b>';
-    document.getElementById("first_text_final").style.opacity = 0 ;
-    document.getElementById("second_text_final").style.opacity = 0 ;
-    document.getElementById("third_text_final").style.opacity = 1 ;
-    document.getElementById("forth_text_final").style.opacity = 0 ;
-    document.getElementById("fifth_text_final").style.opacity = 0 ;
-    document.getElementById("first_text_final").style.fontSize = 0 ;
-    document.getElementById("second_text_final").style.fontSize = 0;
-    document.getElementById("third_text_final").style.fontSize = "15px" ;
-    document.getElementById("forth_text_final").style.fontSize = 0 ;
-    document.getElementById("fifth_text_final").style.fontSize = 0 ;
+    document.getElementById("first_text_final").style.display = "none" ;
+    document.getElementById("second_text_final").style.opacity = "none" ;
+    document.getElementById("third_text_final").style.opacity = "block" ;
+    document.getElementById("forth_text_final").style.opacity = "none" ;
+    document.getElementById("fifth_text_final").style.opacity = "none" ;
     document.getElementById('blnc').innerHTML = '<form name="fusion_machine" onsubmit="return abc()"><input type="text" id="fusion_word" placeholder="FUSION WORD" autocomplete="off" list="preenter"><datalist id="preenter"><option value="FLARE"></datalist><input type="button" value="GO!" onclick="func3()"></form>';
     document.getElementById('tag_lists').innerHTML = '<form name="zzzzzzz"><input type="button" value="1st" onclick="funcbtn1()"><input type="button" value="2nd" onclick="funcbtn2()"><input type="button" value="3rd" onclick="funcbtn3()">';
      document.getElementById('goals').innerHTML=' <p class="third_goal">目的:②、③のパターンでもFUSIONしてみよう！</p>';
@@ -151,16 +141,11 @@ alert('そのたんごは　まだFUSION　できないみたい');
 
   if(num_array2 == 1 && num_array3 == 1){
     alert('ぶじ　すべてのパターンを　つくれたみたいだね！');
-    document.getElementById("first_text_final").style.opacity = 0 ;
-    document.getElementById("second_text_final").style.opacity = 0 ;
-    document.getElementById("third_text_final").style.opacity = 0 ;
-    document.getElementById("forth_text_final").style.opacity = 1 ;
-    document.getElementById("fifth_text_final").style.opacity = 0 ;
-    document.getElementById("first_text_final").style.fontSize = 0 ;
-    document.getElementById("second_text_final").style.fontSize = 0;
-    document.getElementById("third_text_final").style.fontSize = 0 ;
-    document.getElementById("forth_text_final").style.fontSize = "15px" ;
-    document.getElementById("fifth_text_final").style.fontSize = 0 ;
+    document.getElementById("first_text_final").style.display = "none" ;
+    document.getElementById("second_text_final").style.opacity = "none" ;
+    document.getElementById("third_text_final").style.opacity = "none" ;
+    document.getElementById("forth_text_final").style.opacity = "block" ;
+    document.getElementById("fifth_text_final").style.opacity = "none" ;
     document.getElementById('pull').innerHTML = '<b>抜</b>';
     document.getElementById('pick').innerHTML = '<b>拾</b>';
     var list_reload = document.getElementById('preenter');
@@ -181,16 +166,11 @@ function func4(){
   if(forth_anss1 && forth_anss2){
     if(forth_anss1 == 'A' && forth_anss2 == 'B'){
       alert('せいかい！');
-      document.getElementById("first_text_final").style.opacity = 0 ;
-      document.getElementById("second_text_final").style.opacity = 0 ;
-      document.getElementById("third_text_final").style.opacity = 0 ;
-      document.getElementById("forth_text_final").style.opacity = 0 ;
-      document.getElementById("fifth_text_final").style.opacity = 1 ;
-      document.getElementById("first_text_final").style.fontSize = 0 ;
-      document.getElementById("second_text_final").style.fontSize = 0;
-      document.getElementById("third_text_final").style.fontSize = 0 ;
-      document.getElementById("forth_text_final").style.fontSize = 0 ;
-      document.getElementById("fifth_text_final").style.fontSize = "15px" ;
+      document.getElementById("first_text_final").style.display = "none" ;
+      document.getElementById("second_text_final").style.opacity = "none" ;
+      document.getElementById("third_text_final").style.opacity = "none" ;
+      document.getElementById("forth_text_final").style.opacity = "none" ;
+      document.getElementById("fifth_text_final").style.opacity = "block" ;
       document.getElementById('blnc').innerHTML = '<form name="fusion_machine" onsubmit="return abc()"><input type="text" id="fusion_word" placeholder="FUSION WORD" autocomplete="off" list="preenter1"><datalist id="preenter1"></datalist><input type="button" value="GO!" onclick="func5()"></form>';
       document.getElementById('tag_lists').innerHTML = '<form name="zzzzzzz"><input type="button" value="1st" onclick="funcbtn1()"><input type="button" value="2nd" onclick="funcbtn2()"><input type="button" value="3rd" onclick="funcbtn3()"><input type="button" value="4th" onclick="funcbtn4()"><input type="button" value="5th" onclick="funcbtn5()">';
       document.getElementById('preenter1').innerHTML = document.getElementById('secret').innerHTML;
@@ -198,16 +178,11 @@ function func4(){
       document.getElementById('goals').innerHTML='<p class="fifth_goal">目的:なんとかして初期化を阻止しよう！</p>';
     }else if(forth_anss1 == "B" && forth_anss2 == "A"){
       alert('せいかい！');
-      document.getElementById("first_text_final").style.opacity = 0 ;
-      document.getElementById("second_text_final").style.opacity = 0 ;
-      document.getElementById("third_text_final").style.opacity = 0 ;
-      document.getElementById("forth_text_final").style.opacity = 0 ;
-      document.getElementById("fifth_text_final").style.opacity = 1 ;
-      document.getElementById("first_text_final").style.fontSize = 0 ;
-      document.getElementById("second_text_final").style.fontSize = 0;
-      document.getElementById("third_text_final").style.fontSize = 0 ;
-      document.getElementById("forth_text_final").style.fontSize = 0 ;
-      document.getElementById("fifth_text_final").style.fontSize = "15px" ;
+      document.getElementById("first_text_final").style.display = "none" ;
+      document.getElementById("second_text_final").style.opacity = "none" ;
+      document.getElementById("third_text_final").style.opacity = "none" ;
+      document.getElementById("forth_text_final").style.opacity = "none" ;
+      document.getElementById("fifth_text_final").style.opacity = "block" ;
       document.getElementById('blnc').innerHTML = '<form name="fusion_machine" onsubmit="return abc()"><input type="text" id="fusion_word" placeholder="FUSION WORD" autocomplete="off" list="preenter1"><datalist id="preenter1"></datalist><input type="button" value="GO!" onclick="func5()"></form>';
       document.getElementById('tag_lists').innerHTML = '<form name="zzzzzzz"><input type="button" value="1st" onclick="funcbtn1()"><input type="button" value="2nd" onclick="funcbtn2()"><input type="button" value="3rd" onclick="funcbtn3()"><input type="button" value="4th" onclick="funcbtn4()"><input type="button" value="5th" onclick="funcbtn5()">';
       document.getElementById('preenter1').innerHTML = document.getElementById('secret').innerHTML;
@@ -370,64 +345,39 @@ if(fusion_word_array1.indexOf(fusion_words) == -1 && fusion_word_array2.indexOf(
 }
 
 function funcbtn1(){
-  document.getElementById("first_text_final").style.opacity = 1 ;
-  document.getElementById("second_text_final").style.opacity = 0 ;
-  document.getElementById("third_text_final").style.opacity = 0 ;
-  document.getElementById("forth_text_final").style.opacity = 0 ;
-  document.getElementById("fifth_text_final").style.opacity = 0 ;
-  document.getElementById("first_text_final").style.fontSize = "15px" ;
-  document.getElementById("second_text_final").style.fontSize = 0;
-  document.getElementById("third_text_final").style.fontSize = 0 ;
-  document.getElementById("forth_text_final").style.fontSize = 0 ;
-  document.getElementById("fifth_text_final").style.fontSize = 0 ;
+  document.getElementById("first_text_final").style.display = "block" ;
+  document.getElementById("second_text_final").style.opacity = "none" ;
+  document.getElementById("third_text_final").style.opacity = "none" ;
+  document.getElementById("forth_text_final").style.opacity = "none" ;
+  document.getElementById("fifth_text_final").style.opacity = "none" ;
 }
 function funcbtn2(){
-  document.getElementById("first_text_final").style.opacity = 0 ;
-  document.getElementById("second_text_final").style.opacity = 1 ;
-  document.getElementById("third_text_final").style.opacity = 0 ;
-  document.getElementById("forth_text_final").style.opacity = 0 ;
-  document.getElementById("fifth_text_final").style.opacity = 0 ;
-  document.getElementById("first_text_final").style.fontSize = 0 ;
-  document.getElementById("second_text_final").style.fontSize = "15px";
-  document.getElementById("third_text_final").style.fontSize = 0 ;
-  document.getElementById("forth_text_final").style.fontSize = 0 ;
-  document.getElementById("fifth_text_final").style.fontSize = 0 ;
+  document.getElementById("first_text_final").style.display = "none" ;
+  document.getElementById("second_text_final").style.opacity = "block" ;
+  document.getElementById("third_text_final").style.opacity = "none" ;
+  document.getElementById("forth_text_final").style.opacity = "none" ;
+  document.getElementById("fifth_text_final").style.opacity = "none" ;
 }
 function funcbtn3(){
-  document.getElementById("first_text_final").style.opacity = 0 ;
-  document.getElementById("second_text_final").style.opacity = 0 ;
-  document.getElementById("third_text_final").style.opacity = 1 ;
-  document.getElementById("forth_text_final").style.opacity = 0 ;
-  document.getElementById("fifth_text_final").style.opacity = 0 ;
-  document.getElementById("first_text_final").style.fontSize = 0 ;
-  document.getElementById("second_text_final").style.fontSize = 0;
-  document.getElementById("third_text_final").style.fontSize = "15px";
-  document.getElementById("forth_text_final").style.fontSize = 0 ;
-  document.getElementById("fifth_text_final").style.fontSize = 0;
+  document.getElementById("first_text_final").style.display = "none" ;
+  document.getElementById("second_text_final").style.opacity = "none" ;
+  document.getElementById("third_text_final").style.opacity = "block" ;
+  document.getElementById("forth_text_final").style.opacity = "none" ;
+  document.getElementById("fifth_text_final").style.opacity = "none" ;
 }
 function funcbtn4(){
-  document.getElementById("first_text_final").style.opacity = 0 ;
-  document.getElementById("second_text_final").style.opacity = 0 ;
-  document.getElementById("third_text_final").style.opacity = 0 ;
-  document.getElementById("forth_text_final").style.opacity = 1 ;
-  document.getElementById("fifth_text_final").style.opacity = 0 ;
-  document.getElementById("first_text_final").style.fontSize = 0 ;
-  document.getElementById("second_text_final").style.fontSize = 0;
-  document.getElementById("third_text_final").style.fontSize = 0 ;
-  document.getElementById("forth_text_final").style.fontSize = "15px" ;
-  document.getElementById("fifth_text_final").style.fontSize = 0 ;
+  document.getElementById("first_text_final").style.display = "none" ;
+  document.getElementById("second_text_final").style.opacity = "none" ;
+  document.getElementById("third_text_final").style.opacity = "none" ;
+  document.getElementById("forth_text_final").style.opacity = "block" ;
+  document.getElementById("fifth_text_final").style.opacity = "none" ;
 }
 function funcbtn5(){
-  document.getElementById("first_text_final").style.opacity = 0 ;
-  document.getElementById("second_text_final").style.opacity = 0 ;
-  document.getElementById("third_text_final").style.opacity = 0 ;
-  document.getElementById("forth_text_final").style.opacity = 0 ;
-  document.getElementById("fifth_text_final").style.opacity = 1 ;
-  document.getElementById("first_text_final").style.fontSize = 0 ;
-  document.getElementById("second_text_final").style.fontSize = 0;
-  document.getElementById("third_text_final").style.fontSize = 0 ;
-  document.getElementById("forth_text_final").style.fontSize = 0 ;
-  document.getElementById("fifth_text_final").style.fontSize = "15px" ;
+  document.getElementById("first_text_final").style.display = "none" ;
+  document.getElementById("second_text_final").style.opacity = "none" ;
+  document.getElementById("third_text_final").style.opacity = "none" ;
+  document.getElementById("forth_text_final").style.opacity = "none" ;
+  document.getElementById("fifth_text_final").style.opacity = "block" ;
 }
 
 function functest(){
