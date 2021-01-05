@@ -47,39 +47,6 @@ function func2(){
   alert('まずは「sayパネル」と「sellパネル」をFUSIONしてみよう！');
   }
 
-
-
-//Fusion_words 接続関連//
-
-/*else if(document.getElementById('connection').value == 'せつぞく'　&& fusion_words == ans1){
-  alert('FUSIONせいこう！');
-  document.getElementById('connection').value = '接ぞく';
-}
-else if(document.getElementById('connection').value == 'せつ続'　&& fusion_words == ans1){
-  alert('FUSIONせいこう！');
-  document.getElementById('connection').value = '接続';
-}
-else if(document.getElementById('connection').value == 'せつぞく'　&& fusion_words == ans2){
-  alert('FUSIONせいこう！');
-  document.getElementById('connection').valueL = 'せつ続';
-}
-else if(document.getElementById('connection').value == '接ぞく'　&& fusion_words == ans2){
-  alert('FUSIONせいこう！');
-  document.getElementById('connection').value = '接続';
-}
-else if(document.getElementById('connection').value == '接ぞく'　&& fusion_words == ans1){
-  alert('すでにFUSIONした　たんごだね');
-}
-else if(document.getElementById('connection').value == '接続'　&& fusion_words == ans1){
-  alert('すでにFUSIONした　たんごだね');
-}
-else if(document.getElementById('connection').value == 'せつ続'　&& fusion_words == ans2){
-  alert('すでにFUSIONした　たんごだね');
-}
-else if(document.getElementById('connection').value == '接続'　&& fusion_words == ans2){
-  alert('すでにFUSIONした　たんごだね');
-}*/
-
   else{
   alert('ふせいかい...　もういちど　かんがえてみよう！');
 }
