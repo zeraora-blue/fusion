@@ -16,9 +16,10 @@ function func1(){
     document.getElementById("third_text_final").style.display = "none" ;
     document.getElementById("forth_text_final").style.display = "none" ;
     document.getElementById("fifth_text_final").style.display = "none" ;
- document.getElementById('blnc').innerHTML = '<form name="fusion_machine" onsubmit="return abc()"><input type="text" id="fusion_word" placeholder="FUSION WORD" autocomplete="off"><input type="button" value="GO!" onclick="func2()"></form>';
- document.getElementById('tag_lists').innerHTML = '<form name="zzzzzzz"><input type="button" value="1st" onclick="funcbtn1()"><input type="button" value="2nd" onclick="funcbtn2()">';
- document.getElementById('goals').innerHTML='<p class="second_goal">目的:封筒を開けて、実際にFUSIONしてみよう！</p>';
+ document.getElementById('blnc').innerHTML = '<form name="fusion_machine" onsubmit="return abc()"><input type="button" value="FUSION MACHINEをつかう" onclick="functrans()" id="go_fusionbtn"></form>';
+ document.getElementById('tag_lists').innerHTML = '<form name="zzzzzzz"><input type="button" value="1st" onclick="funcbtn1()" class="tag_btn btn_first"><input type="button" value="2nd" onclick="funcbtn2()" class="tag_btn btn_second">';
+ document.getElementById('goals').innerHTML='<p class="second_goal">2nd：封筒を開けて、実際にFUSIONしてみよう！</p>';
+ document.getElementById("text_mark").style.border = "10px solid #53F890" ;
   }
   else{
   alert('ふせいかい...　もういちど　かんがえてみよう！');
@@ -33,19 +34,58 @@ function func2(){
     }
     else{
     alert('FUSIONせいこう！');
+    document.getElementById('fusion_word').value = "";
+      document.getElementById("veil").style.visibility = "hidden" ;
+      var list_reload = document.getElementById('preenter');
+      list_reload.insertAdjacentHTML('beforeend', '<option value="FLARE">');
+    document.getElementById('fusion_btn').onclick = new Function("func3()");
     document.getElementById('read').innerHTML = '<b>読</b>';
     document.getElementById("first_text_final").style.display = "none" ;
     document.getElementById("second_text_final").style.display = "none" ;
     document.getElementById("third_text_final").style.display = "block" ;
     document.getElementById("forth_text_final").style.display = "none" ;
     document.getElementById("fifth_text_final").style.display = "none" ;
-    document.getElementById('blnc').innerHTML = '<form name="fusion_machine" onsubmit="return abc()"><input type="text" id="fusion_word" placeholder="FUSION WORD" autocomplete="off" list="preenter"><datalist id="preenter"><option value="FLARE"></datalist><input type="button" value="GO!" onclick="func3()"></form>';
-    document.getElementById('tag_lists').innerHTML = '<form name="zzzzzzz"><input type="button" value="1st" onclick="funcbtn1()"><input type="button" value="2nd" onclick="funcbtn2()"><input type="button" value="3rd" onclick="funcbtn3()">';
-     document.getElementById('goals').innerHTML=' <p class="third_goal">目的:②、③のパターンでもFUSIONしてみよう！</p>';
+   document.getElementById('blnc').innerHTML = '<form name="fusion_machine" onsubmit="return abc()"><input type="button" value="FUSION MACHINEをつかう" onclick="functrans()" id="go_fusionbtn"></form>';
+    document.getElementById('tag_lists').innerHTML = '<form name="zzzzzzz"><input type="button" value="1st" onclick="funcbtn1()" class="tag_btn btn_first"><input type="button" value="2nd" onclick="funcbtn2()" class="tag_btn btn_second"><input type="button" value="3rd" onclick="funcbtn3()" class="tag_btn btn_third">';
+     document.getElementById('goals').innerHTML=' <p class="third_goal">3rd：②、③のパターンでもFUSIONしてみよう！</p>';
+      document.getElementById("text_mark").style.border = "10px solid #3FC6E3" ;
   }
   }else if(fusion_word_array1.indexOf(fusion_words) !== -1 || fusion_word_array2.indexOf(fusion_words) !== -1 || fusion_word_array3.indexOf(fusion_words) !== -1){
   alert('まずは「sayパネル」と「sellパネル」をFUSIONしてみよう！');
   }
+
+
+
+//Fusion_words 接続関連//
+
+/*else if(document.getElementById('connection').value == 'せつぞく'　&& fusion_words == ans1){
+  alert('FUSIONせいこう！');
+  document.getElementById('connection').value = '接ぞく';
+}
+else if(document.getElementById('connection').value == 'せつ続'　&& fusion_words == ans1){
+  alert('FUSIONせいこう！');
+  document.getElementById('connection').value = '接続';
+}
+else if(document.getElementById('connection').value == 'せつぞく'　&& fusion_words == ans2){
+  alert('FUSIONせいこう！');
+  document.getElementById('connection').valueL = 'せつ続';
+}
+else if(document.getElementById('connection').value == '接ぞく'　&& fusion_words == ans2){
+  alert('FUSIONせいこう！');
+  document.getElementById('connection').value = '接続';
+}
+else if(document.getElementById('connection').value == '接ぞく'　&& fusion_words == ans1){
+  alert('すでにFUSIONした　たんごだね');
+}
+else if(document.getElementById('connection').value == '接続'　&& fusion_words == ans1){
+  alert('すでにFUSIONした　たんごだね');
+}
+else if(document.getElementById('connection').value == 'せつ続'　&& fusion_words == ans2){
+  alert('すでにFUSIONした　たんごだね');
+}
+else if(document.getElementById('connection').value == '接続'　&& fusion_words == ans2){
+  alert('すでにFUSIONした　たんごだね');
+}*/
 
   else{
   alert('ふせいかい...　もういちど　かんがえてみよう！');
@@ -73,11 +113,13 @@ function func3(){
       document.getElementById('sound').innerHTML = '<b>音</b>';
       var list_reload = document.getElementById('preenter');
       list_reload.insertAdjacentHTML('beforeend', '<option value="CRUSH">');
+      document.getElementById('fusion_word').value = "";
     }else if(fusion_words == 'LIGHT'){
       document.getElementById('me1').innerHTML = '<b>吾</b>';
       document.getElementById('me2').innerHTML = '<b>吾</b>';
       var list_reload = document.getElementById('preenter');
       list_reload.insertAdjacentHTML('beforeend', '<option value="LIGHT">');
+      document.getElementById('fusion_word').value = "";
     }
     }
   }else if(fusion_word_array3.indexOf(fusion_words) !== -1){
@@ -91,6 +133,7 @@ alert('FUSIONせいこう！');
 document.getElementById('language').innerHTML = '<b>語</b>';
 var list_reload = document.getElementById('preenter');
 list_reload.insertAdjacentHTML('beforeend', '<option value="FIGHT">');
+document.getElementById('fusion_word').value = "";
 num_array3 = 1;
 }
 
@@ -108,6 +151,8 @@ alert('そのたんごは　まだFUSION　できないみたい');
 
   if(num_array2 == 1 && num_array3 == 1){
     alert('ぶじ　すべてのパターンを　つくれたみたいだね！');
+    document.getElementById('fusion_btn').onclick = new Function("func5()");
+      document.getElementById("veil").style.visibility = "hidden" ;
     document.getElementById("first_text_final").style.display = "none" ;
     document.getElementById("second_text_final").style.display = "none" ;
     document.getElementById("third_text_final").style.display = "none" ;
@@ -120,9 +165,10 @@ alert('そのたんごは　まだFUSION　できないみたい');
     list_reload = document.getElementById('preenter');
     list_reload.insertAdjacentHTML('beforeend', '<option value="FLOAT">');
     document.getElementById('secret').innerHTML = document.getElementById('preenter').innerHTML;
-    document.getElementById('tag_lists').innerHTML = '<form name="zzzzzzz"><input type="button" value="1st" onclick="funcbtn1()"><input type="button" value="2nd" onclick="funcbtn2()"><input type="button" value="3rd" onclick="funcbtn3()"><input type="button" value="4th" onclick="funcbtn4()">';
-    document.getElementById('goals').innerHTML='  <p class="forth_goal">目的:パネルを切って新しいパネルにしよう！</p>';
-    document.getElementById('blnc').innerHTML = '<form name="forth_check" onsubmit="return abc()"><input type="text" id="forth_ans1"　autocomplete="off"><input type="text" id="forth_ans2"　autocomplete="off"><input type="button" value="GO!" onclick="func4()">';
+    document.getElementById('tag_lists').innerHTML = '<form name="zzzzzzz"><input type="button" value="1st" onclick="funcbtn1()" class="tag_btn btn_first"><input type="button" value="2nd" onclick="funcbtn2()" class="tag_btn btn_second"><input type="button" value="3rd" onclick="funcbtn3()" class="tag_btn btn_third"><input type="button" value="4th" onclick="funcbtn4()" class="tag_btn btn_forth">';
+    document.getElementById('goals').innerHTML='  <p class="forth_goal">4th：パネルを切って新しいパネルにしよう！</p>';
+    document.getElementById('blnc').innerHTML = '<form name="forth_check" onsubmit="return abc()"><input type="button" value="FUSION MACHINEをつかう" onclick="funcnottrans()" id="go_fusionbtn"><input type="text" id="forth_ans1" placeholder="1つめのこたえ" autocomplete="off"><input type="text" id="forth_ans2"　 placeholder="2つめのこたえ" autocomplete="off"><input type="button" value="GO!" onclick="func4()" class="forth_check_btn">';
+    document.getElementById("text_mark").style.border = "10px solid #565EFE" ;
   }
 }
 
@@ -138,22 +184,21 @@ function func4(){
       document.getElementById("third_text_final").style.display = "none" ;
       document.getElementById("forth_text_final").style.display = "none" ;
       document.getElementById("fifth_text_final").style.display = "block" ;
-      document.getElementById('blnc').innerHTML = '<form name="fusion_machine" onsubmit="return abc()"><input type="text" id="fusion_word" placeholder="FUSION WORD" autocomplete="off" list="preenter1"><datalist id="preenter1"></datalist><input type="button" value="GO!" onclick="func5()"></form>';
-      document.getElementById('tag_lists').innerHTML = '<form name="zzzzzzz"><input type="button" value="1st" onclick="funcbtn1()"><input type="button" value="2nd" onclick="funcbtn2()"><input type="button" value="3rd" onclick="funcbtn3()"><input type="button" value="4th" onclick="funcbtn4()"><input type="button" value="5th" onclick="funcbtn5()">';
-      document.getElementById('preenter1').innerHTML = document.getElementById('secret').innerHTML;
-      document.getElementById('secret').innerHTML = "";
-      document.getElementById('goals').innerHTML='<p class="fifth_goal">目的:なんとかして初期化を阻止しよう！</p>';
+       document.getElementById('blnc').innerHTML = '<form name="fusion_machine" onsubmit="return abc()"><input type="button" value="FUSION MACHINEをつかう" onclick="functrans()" id="go_fusionbtn">  <div class="conn"><input type="button" id="connection" value="せつぞく" onclick="funclast1()"><div class="conn1" id="conn1" onclick="funclast1()"></div><div class="conn2" id="conn2" onclick="funclast1()"></div></div></form>';
+      document.getElementById('tag_lists').innerHTML = '<form name="zzzzzzz"><input type="button" value="1st" onclick="funcbtn1()" class="tag_btn btn_first"><input type="button" value="2nd" onclick="funcbtn2()" class="tag_btn btn_second"><input type="button" value="3rd" onclick="funcbtn3()" class="tag_btn btn_third"><input type="button" value="4th" onclick="funcbtn4()" class="tag_btn btn_forth"><input type="button" value="5th" onclick="funcbtn5()" class="tag_btn btn_fifth">';
+      document.getElementById('goals').innerHTML='<p class="fifth_goal">LAST：なんとかして初期化を阻止しよう！</p>';
+          document.getElementById("text_mark").style.border = "10px solid #D463F9 " ;
     }else if(forth_anss1 == "B" && forth_anss2 == "A"){
+      alert('せいかい！');
       document.getElementById("first_text_final").style.display = "none" ;
       document.getElementById("second_text_final").style.display = "none" ;
       document.getElementById("third_text_final").style.display = "none" ;
       document.getElementById("forth_text_final").style.display = "none" ;
       document.getElementById("fifth_text_final").style.display = "block" ;
-      document.getElementById('blnc').innerHTML = '<form name="fusion_machine" onsubmit="return abc()"><input type="text" id="fusion_word" placeholder="FUSION WORD" autocomplete="off" list="preenter1"><datalist id="preenter1"></datalist><input type="button" value="GO!" onclick="func5()"></form>';
-      document.getElementById('tag_lists').innerHTML = '<form name="zzzzzzz"><input type="button" value="1st" onclick="funcbtn1()"><input type="button" value="2nd" onclick="funcbtn2()"><input type="button" value="3rd" onclick="funcbtn3()"><input type="button" value="4th" onclick="funcbtn4()"><input type="button" value="5th" onclick="funcbtn5()">';
-      document.getElementById('preenter1').innerHTML = document.getElementById('secret').innerHTML;
-      document.getElementById('secret').innerHTML = "";
-      document.getElementById('goals').innerHTML='<p class="fifth_goal">目的:なんとかして初期化を阻止しよう！</p>';
+       document.getElementById('blnc').innerHTML = '<form name="fusion_machine" onsubmit="return abc()"><input type="button" value="FUSION MACHINEをつかう" onclick="functrans()" id="go_fusionbtn">    <div class="conn"><input type="button" id="connection" value="せつぞく" onclick="funclast1()"><div class="conn1" id="conn1" onclick="funclast1()"></div><div class="conn2" id="conn2" onclick="funclast1()"></div></div></form>';
+      document.getElementById('tag_lists').innerHTML = '<form name="zzzzzzz"><input type="button" value="1st" onclick="funcbtn1()" class="tag_btn btn_first"><input type="button" value="2nd" onclick="funcbtn2()" class="tag_btn btn_second"><input type="button" value="3rd" onclick="funcbtn3()" class="tag_btn btn_third"><input type="button" value="4th" onclick="funcbtn4()" class="tag_btn btn_forth"><input type="button" value="5th" onclick="funcbtn5()" class="tag_btn btn_fifth">';
+      document.getElementById('goals').innerHTML='<p class="fifth_goal">LAST：なんとかして初期化を阻止しよう！</p>';
+          document.getElementById("text_mark").style.border = "10px solid #D463F9 " ;
     }else if(forth_anss1 == "B" && forth_anss2 == "A"){
     }else{
       alert('ふせいかい...　もういちど　かんがえてみよう！')
@@ -176,8 +221,9 @@ function func5(){
   }else{
     alert('FUSIONせいこう！');
     document.getElementById('read').innerHTML = '<b>読</b>';
-    var list_reload = document.getElementById('preenter1');
+    var list_reload = document.getElementById('preenter');
     list_reload.insertAdjacentHTML('beforeend', '<option value="FLARE">');
+    document.getElementById('fusion_word').value = "";
   }
   }
 
@@ -187,8 +233,9 @@ function func5(){
   }else{
     alert('FUSIONせいこう！');
     document.getElementById('pull').innerHTML = '<b>抜</b>';
-    var list_reload = document.getElementById('preenter1');
+    var list_reload = document.getElementById('preenter');
     list_reload.insertAdjacentHTML('beforeend', '<option value="INPUT">');
+    document.getElementById('fusion_word').value = "";
   }
   }
 
@@ -199,8 +246,9 @@ function func5(){
     alert('FUSIONせいこう！');
     document.getElementById('light1').innerHTML = '<b>明</b>';
     document.getElementById('light2').innerHTML = '<b>明</b>';
-    var list_reload = document.getElementById('preenter1');
+    var list_reload = document.getElementById('preenter');
     list_reload.insertAdjacentHTML('beforeend', '<option value="CRAFT">');
+    document.getElementById('fusion_word').value = "";
   }
   }
 
@@ -210,8 +258,9 @@ function func5(){
   }else{
     alert('FUSIONせいこう！');
     document.getElementById('pick').innerHTML = '<b>拾</b>';
-    var list_reload = document.getElementById('preenter1');
+    var list_reload = document.getElementById('preenter');
     list_reload.insertAdjacentHTML('beforeend', '<option value="FLOAT">');
+    document.getElementById('fusion_word').value = "";
   }
   }
 
@@ -221,8 +270,9 @@ function func5(){
   }else{
     alert('FUSIONせいこう！');
     document.getElementById('give').innerHTML = '<b>給</b>';
-    var list_reload = document.getElementById('preenter1');
+    var list_reload = document.getElementById('preenter');
     list_reload.insertAdjacentHTML('beforeend', '<option value="ALONE">');
+    document.getElementById('fusion_word').value = "";
   }
   }
 
@@ -232,8 +282,9 @@ function func5(){
   }else{
     alert('FUSIONせいこう！');
     document.getElementById('sound').innerHTML = '<b>音</b>';
-    var list_reload = document.getElementById('preenter1');
+    var list_reload = document.getElementById('preenter');
     list_reload.insertAdjacentHTML('beforeend', '<option value="CRUSH">');
+    document.getElementById('fusion_word').value = "";
   }
   }
 
@@ -244,8 +295,9 @@ function func5(){
     alert('FUSIONせいこう！');
     document.getElementById('me1').innerHTML = '<b>吾</b>'
     document.getElementById('me2').innerHTML = '<b>吾</b>'
-    var list_reload = document.getElementById('preenter1');
+    var list_reload = document.getElementById('preenter');
     list_reload.insertAdjacentHTML('beforeend', '<option value="LIGHT">');
+    document.getElementById('fusion_word').value = "";
   }
   }
 
@@ -255,8 +307,9 @@ function func5(){
   }else{
     alert('FUSIONせいこう！');
     document.getElementById('like').innerHTML = '<b>如</b>'
-    var list_reload = document.getElementById('preenter1');
+    var list_reload = document.getElementById('preenter');
     list_reload.insertAdjacentHTML('beforeend', '<option value="GIANT">');
+    document.getElementById('fusion_word').value = "";
   }
   }
 
@@ -266,40 +319,47 @@ function func5(){
   }else{
     alert('FUSIONせいこう！');
     document.getElementById('language').innerHTML = '<b>語</b>'
-    var list_reload = document.getElementById('preenter1');
+    var list_reload = document.getElementById('preenter');
     list_reload.insertAdjacentHTML('beforeend', '<option value="FIGHT">');
+    document.getElementById('fusion_word').value = "";
   }
   }
 
   if(fusion_words == 'FINAL'){
-    if(document.getElementById('connection').value == '接ぞく'||document.getElementById('connection').value == '接続'){
+    if(document.getElementById('connection').value == '　接ぞく'||document.getElementById('connection').value == '接続'){
     alert('すでにFUSIONした　たんごだね');
   }else{
     alert('FUSIONせいこう！');
-    var list_reload = document.getElementById('preenter1');
+    var list_reload = document.getElementById('preenter');
     list_reload.insertAdjacentHTML('beforeend', '<option value="FINAL">');
+    document.getElementById('fusion_word').value = "";
+    document.getElementById("conn1").style.visibility = "hidden" ;
     if(document.getElementById('connection').value == 'せつぞく'){
-      document.getElementById('connection').value = '接ぞく';
+      document.getElementById('connection').value = '　接ぞく';
       document.getElementById('on').innerHTML = '<b>接</b>'
-    }else if(document.getElementById('connection').value == 'せつ続'){
+    }else if(document.getElementById('connection').value == 'せつ続　'){
       document.getElementById('connection').value = '接続';
+      document.getElementById('connection').onclick = new Function("funclast2()");
       document.getElementById('on').innerHTML = '<b>接</b>'
     }
   }
   }
 
   if(fusion_words == 'ACTOR'){
-    if(document.getElementById('connection').value == 'せつ続'||document.getElementById('connection').value == '接続'){
+    if(document.getElementById('connection').value == 'せつ続　'||document.getElementById('connection').value == '接続'){
     alert('すでにFUSIONした　たんごだね');
   }else{
     alert('FUSIONせいこう！');
-    var list_reload = document.getElementById('preenter1');
+    var list_reload = document.getElementById('preenter');
     list_reload.insertAdjacentHTML('beforeend', '<option value="ACTOR">');
+    document.getElementById('fusion_word').value = "";
+      document.getElementById("conn2").style.visibility = "hidden" ;
     if(document.getElementById('connection').value == 'せつぞく'){
-      document.getElementById('connection').value = 'せつ続';
+      document.getElementById('connection').value = 'せつ続　';
       document.getElementById('continue').innerHTML = '<b>続</b>'
-    }else if(document.getElementById('connection').value == '接ぞく'){
+    }else if(document.getElementById('connection').value == '　接ぞく'){
       document.getElementById('connection').value = '接続';
+      document.getElementById('connection').onclick = new Function("funclast2()");
       document.getElementById('continue').innerHTML = '<b>続</b>'
     }
   }
@@ -316,6 +376,7 @@ function funcbtn1(){
   document.getElementById("third_text_final").style.display = "none" ;
   document.getElementById("forth_text_final").style.display = "none" ;
   document.getElementById("fifth_text_final").style.display = "none" ;
+  document.getElementById("text_mark").style.border = "10px solid #A6EF48 " ;
 }
 function funcbtn2(){
   document.getElementById("first_text_final").style.display = "none" ;
@@ -323,6 +384,7 @@ function funcbtn2(){
   document.getElementById("third_text_final").style.display = "none" ;
   document.getElementById("forth_text_final").style.display = "none" ;
   document.getElementById("fifth_text_final").style.display = "none" ;
+  document.getElementById("text_mark").style.border = "10px solid #53F890" ;
 }
 function funcbtn3(){
   document.getElementById("first_text_final").style.display = "none" ;
@@ -330,6 +392,7 @@ function funcbtn3(){
   document.getElementById("third_text_final").style.display = "block" ;
   document.getElementById("forth_text_final").style.display = "none" ;
   document.getElementById("fifth_text_final").style.display = "none" ;
+  document.getElementById("text_mark").style.border = "10px solid #3FC6E3" ;
 }
 function funcbtn4(){
   document.getElementById("first_text_final").style.display = "none" ;
@@ -337,6 +400,7 @@ function funcbtn4(){
   document.getElementById("third_text_final").style.display = "none" ;
   document.getElementById("forth_text_final").style.display = "block" ;
   document.getElementById("fifth_text_final").style.display = "none" ;
+    document.getElementById("text_mark").style.border = "10px solid #565EFE" ;
 }
 function funcbtn5(){
   document.getElementById("first_text_final").style.display = "none" ;
@@ -344,6 +408,27 @@ function funcbtn5(){
   document.getElementById("third_text_final").style.display = "none" ;
   document.getElementById("forth_text_final").style.display = "none" ;
   document.getElementById("fifth_text_final").style.display = "block" ;
+  document.getElementById("text_mark").style.border = "10px solid #D463F9" ;
+}
+
+function funccancel(){
+  document.getElementById("veil").style.visibility = "hidden" ;
+}
+
+function functrans(){
+  document.getElementById("veil").style.visibility = "visible" ;
+}
+
+function funcnottrans(){
+  alert('いまは　2つのパネルの　こたえを　おしえて！');
+}
+
+function funclast1(){
+  alert('まだ　おせないみたい...。')
+}
+
+function funclast2(){
+  alert('クリア！')
 }
 
 function functest(){
