@@ -1,6 +1,5 @@
 input[type="submit"],
 input[type="button"] {
-  border-radius: 0;
   -webkit-box-sizing: content-box;
   -webkit-appearance: button;
   appearance: button;
@@ -55,6 +54,7 @@ color: #675555;
 margin: 0 auto;
 }
 .confirm_btn{
+  background-color:#ABABAB;
   text-align:center;
 font: normal normal bold 30px/32px Yu Gothic;
 letter-spacing: 0px;
