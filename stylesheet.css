@@ -1,3 +1,7 @@
+input {
+-webkit-appearance: none;
+border-radius: 0;
+}
 
 #first_text_final{
 display:block;
