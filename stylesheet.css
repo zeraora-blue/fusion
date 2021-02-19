@@ -1,6 +1,7 @@
 @font-face {
 	font-family: 'Yu Gothic';
-	src: url(font/YuGothic.ttf);
+	src: url(font/YuGothM_min.ttf);
+	font-weight: 500;
 }
 
 @font-face {
