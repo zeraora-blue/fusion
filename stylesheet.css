@@ -6,7 +6,8 @@
 
 @font-face {
 	font-family: 'Source Han Sans JP';
-	src: url(font/SourceHanSans-Medium.otf) format('opentype');
+	src: url(font/SourceHanSans-Medium_min.otf);
+	font-weight: 500;
 }
 
 input {
