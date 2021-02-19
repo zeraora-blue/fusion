@@ -16,6 +16,10 @@
 	font-weight: 500;
 }
 
+b{
+font-weight: 800;
+}
+
 input {
 -webkit-appearance: none;
 border-radius: 0;
