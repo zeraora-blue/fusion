@@ -177,7 +177,7 @@ function func4(){
   var forth_anss1 = document.getElementById('forth_ans1').value;
   var forth_anss2 = document.getElementById('forth_ans2').value;
   if(forth_anss1 && forth_anss2){
-    if(forth_anss1 == 'GIRL' && forth_anss2 == 'MOON'){
+    if(forth_anss1 == 'girl' && forth_anss2 == 'moon'){
       alert('せいかい！');
       document.getElementById("first_text_final").style.display = "none" ;
       document.getElementById("second_text_final").style.display = "none" ;
@@ -188,7 +188,7 @@ function func4(){
       document.getElementById('tag_lists').innerHTML = '<form name="zzzzzzz"><input type="button" value="1st" onclick="funcbtn1()" class="tag_btn btn_first"><input type="button" value="2nd" onclick="funcbtn2()" class="tag_btn btn_second"><input type="button" value="3rd" onclick="funcbtn3()" class="tag_btn btn_third"><input type="button" value="4th" onclick="funcbtn4()" class="tag_btn btn_forth"><input type="button" value="5th" onclick="funcbtn5()" class="tag_btn btn_fifth">';
       document.getElementById('goals').innerHTML='<p class="fifth_goal">LAST：なんとかして初期化を阻止しよう！</p>';
           document.getElementById("text_mark").style.border = "10px solid #D463F9 " ;
-    }else if(forth_anss1 == "MOON" && forth_anss2 == "GIRL"){
+    }else if(forth_anss1 == "moon" && forth_anss2 == "girl"){
       alert('せいかい！');
       document.getElementById("first_text_final").style.display = "none" ;
       document.getElementById("second_text_final").style.display = "none" ;
@@ -199,7 +199,7 @@ function func4(){
       document.getElementById('tag_lists').innerHTML = '<form name="zzzzzzz"><input type="button" value="1st" onclick="funcbtn1()" class="tag_btn btn_first"><input type="button" value="2nd" onclick="funcbtn2()" class="tag_btn btn_second"><input type="button" value="3rd" onclick="funcbtn3()" class="tag_btn btn_third"><input type="button" value="4th" onclick="funcbtn4()" class="tag_btn btn_forth"><input type="button" value="5th" onclick="funcbtn5()" class="tag_btn btn_fifth">';
       document.getElementById('goals').innerHTML='<p class="fifth_goal">LAST：なんとかして初期化を阻止しよう！</p>';
           document.getElementById("text_mark").style.border = "10px solid #D463F9 " ;
-    }else if(forth_anss1 == "MOON" && forth_anss2 == "GIRL"){
+    }else if(forth_anss1 == "moon" && forth_anss2 == "girl"){
     }else{
       alert('ふせいかい...　もういちど　かんがえてみよう！')
     }
