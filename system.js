@@ -179,7 +179,7 @@ function func4(){
   if(forth_anss1 && forth_anss2){
     if((forth_anss1 == 'girl' && forth_anss2 == 'moon') || (forth_anss1 == 'Girl' && forth_anss2 == 'Moon') || (forth_anss1 == 'GIRL' && forth_anss2 == 'MOON')
       || (forth_anss1 == 'girl' && forth_anss2 == 'Moon') || (forth_anss1 == 'girl' && forth_anss2 == 'MOON') || (forth_anss1 == 'Girl' && forth_anss2 == 'moon')
-      || (forth_anss1 == 'Girl' && forth_anss2 == 'MOON') || (forth_anss1 == 'GIRL' && forth_anss2 == 'Moon') || (forth_anss1 == 'GIRL' && forth_anss2 == 'moon'){
+      || (forth_anss1 == 'Girl' && forth_anss2 == 'MOON') || (forth_anss1 == 'GIRL' && forth_anss2 == 'Moon') || (forth_anss1 == 'GIRL' && forth_anss2 == 'moon')){
       alert('せいかい！');
       document.getElementById("first_text_final").style.display = "none" ;
       document.getElementById("second_text_final").style.display = "none" ;
@@ -192,7 +192,7 @@ function func4(){
           document.getElementById("text_mark").style.border = "10px solid #D463F9 " ;
     }else if((forth_anss1 == "moon" && forth_anss2 == "girl") || (forth_anss1 == "Moon" && forth_anss2 == "Girl") || (forth_anss1 == "MOON" && forth_anss2 == "GIRL")
             || (forth_anss1 == "moon" && forth_anss2 == "Girl") || (forth_anss1 == "moon" && forth_anss2 == "GIRL") || (forth_anss1 == "Moon" && forth_anss2 == "girl")
-            || (forth_anss1 == "Moon" && forth_anss2 == "GIRL") || (forth_anss1 == "MOON" && forth_anss2 == "Girl") || (forth_anss1 == "MOON" && forth_anss2 == "girl"){
+            || (forth_anss1 == "Moon" && forth_anss2 == "GIRL") || (forth_anss1 == "MOON" && forth_anss2 == "Girl") || (forth_anss1 == "MOON" && forth_anss2 == "girl")){
       alert('せいかい！');
       document.getElementById("first_text_final").style.display = "none" ;
       document.getElementById("second_text_final").style.display = "none" ;
