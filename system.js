@@ -2,12 +2,12 @@ const first_ans_final = "FINISH";
 const fusion_word_array1 = ['FLARE'/*読 read*/,'ACTOR'/*続 continue*/,'GIANT'/*如 like*/,'INPUT'/*抜 pull*/,'CRAFT'/*明 light*/,'FLOAT'/*拾 pick*/,'ALONE'/*給 give*/];
 const fusion_word_array2 = ['CRUSH'/*音 sound*/,'LIGHT'/*吾 me*/];
 const fusion_word_array3 = ['FINAL'/*接 on*/,'FIGHT'/*語 language*/];
-
+const size_num = 340;
 
 //340の数字変更わすれないように！！！！！
 
 window.onload = function(){
-  if(document.getElementById('text_mark').clientWidth == 340){
+  if(document.getElementById('text_mark').clientWidth == size_num){
     document.getElementById("first_text_final").innerHTML = 'ぼくは　エーアイの　<span id="me1">ご</span>ろう　だ。<br>'
     +'<br>きょうは　この　そうちを　はじめて　つかう　ひ！<br>'
     +'<br>きみが　しようしゃ　だいいちごうに'
@@ -16,6 +16,40 @@ window.onload = function(){
     +'つかえるか　テストをするよ！<br>'
     +'<br>10まいの　パネルに　かかれた　なぞを　といて'
     +'<br>しじされた　もじを　<span id="pick">ひろ</span>い　<br>こたえを　にゅうりょくしてね！<br>';
+
+    document.getElementById("second_text_final").innerHTML = 'すごい！　よわ<span id="sound">ね</span>を　はかずに　<br>こたえを　だせた　みたいだね。<br>'
+    +'<br>よし！　そしたら　きみに<br>「FUSION MACHINE」の'
+    +'<br>とりあつかいせつ<span id="light1">めい</span>しょを　し<span id="give">きゅう</span>しよう！<br>'
+    +'<br>とりあつかいせつ<span id="light2">めい</span>しょを　しっかりと　<br><span id="read">よ</span>んでから'
+    +'<br>じっさいに「sayパネル」と「sellパネル」を'
+    +'<br>ボードに　おいて　FUSIONしてみよう！<br>'
+    +'<br>FUSION WORDは　えい<span id="language">ご</span>で　<br>にゅうりょくしてね！<br>';
+
+    document.getElementById("forth_text_final").innerHTML = 'じゅうぶん　つかいこなしているね！<br>'
+    +'<br>ぼくも　2かい　FUSION したよ！<br>'
+    +'<br>そういえば　はかせから　<br>てがみを　あずかっていたんだった。<br>'
+    +'<br>このパネルの　ここを　きりはなすと'
+    +'<br>あらたな　ふたつの　パネルが　できあがるぞ。<br>'
+    +'<br>じゃあ　じっさいに　きりはなしてみよう！<br>'
+    +'<br>きりはなして　てにはいった　ふたつの'
+    +'<br>パネルの なぞの　こたえを　おしえて！'
+    +'<br>';
+
+    document.getElementById("fifth_text_final").innerHTML = 'なるほど！　そのふたつのパネルが　<br>てに　はいったんだね！'
+      +'<br>ん？てがみに　まだ　なにか　かいてあるみたい。<br>'
+      +'<br>...ただし　あくよう　されないように'
+      +'<br>「FUSION MACHINE」は　パネルの　きりはなしを'
+      +'<br>さっちして しょきかプログラムが　きどうする　<br>せっていに　なっている　から'
+      +'<br>かってに　きりはなさない　ように！'
+      +'<br>もし　きりはなして　しまったら'
+      +'<br><span id="me2">ご</span>ろうの　かんじの　[<span id="on">せつ</span><span id="continue">ぞく</span>]ボタンを　おせば'
+      +'<br>しょきかを　とめることが　できるぞ！'
+      +'<br>はかせより<br>'
+      +'<br>たいへんだ！　しょきか　なんてしたら'
+      +'<br>はかせに　おこられちゃうよ...。'
+      +'<br>'
+      +'<br>さいわい　まだ　データに　けつ<span id="like">じょ</span>は　ないみたい...。'
+      +'<br>なんとかして　ぼくの　このボタンを　おしてくれ！'
     }
 }
 
@@ -36,7 +70,11 @@ function func1(){
     document.getElementById("third_text_final").style.display = "none" ;
     document.getElementById("forth_text_final").style.display = "none" ;
     document.getElementById("fifth_text_final").style.display = "none" ;
- document.getElementById('blnc').innerHTML = '<form name="fusion_machine" onsubmit="return abc()"><input type="button" value="FUSION MACHINEをつかう" onclick="functrans()" id="go_fusionbtn"></form>';
+    if(document.getElementById('text_mark').clientWidth == size_num){
+    document.getElementById('blnc').innerHTML = '<form name="fusion_machine" onsubmit="return abc()"><input type="button" value="FUSION MACHINE" onclick="functrans()" id="go_fusionbtn"></form>';
+    }else{
+    document.getElementById('blnc').innerHTML = '<form name="fusion_machine" onsubmit="return abc()"><input type="button" value="FUSION MACHINEをつかう" onclick="functrans()" id="go_fusionbtn"></form>';
+    }
  document.getElementById('tag_lists').innerHTML = '<form name="zzzzzzz"><input type="button" value="1st" onclick="funcbtn1()" class="tag_btn btn_first"><input type="button" value="2nd" onclick="funcbtn2()" class="tag_btn btn_second">';
  document.getElementById('goals').innerHTML='<p class="second_goal">2nd：封筒を開けて、実際にFUSIONしてみよう！</p>';
  document.getElementById("text_mark").style.borderColor = "#53F890" ;
@@ -65,7 +103,11 @@ function func2(){
     document.getElementById("third_text_final").style.display = "block" ;
     document.getElementById("forth_text_final").style.display = "none" ;
     document.getElementById("fifth_text_final").style.display = "none" ;
-   document.getElementById('blnc').innerHTML = '<form name="fusion_machine" onsubmit="return abc()"><input type="button" value="FUSION MACHINEをつかう" onclick="functrans()" id="go_fusionbtn"></form>';
+    if(document.getElementById('text_mark').clientWidth == size_num){
+      document.getElementById('blnc').innerHTML = '<form name="fusion_machine" onsubmit="return abc()"><input type="button" value="FUSION MACHINE" onclick="functrans()" id="go_fusionbtn"></form>';
+    }else{
+      document.getElementById('blnc').innerHTML = '<form name="fusion_machine" onsubmit="return abc()"><input type="button" value="FUSION MACHINEをつかう" onclick="functrans()" id="go_fusionbtn"></form>';
+    }
     document.getElementById('tag_lists').innerHTML = '<form name="zzzzzzz"><input type="button" value="1st" onclick="funcbtn1()" class="tag_btn btn_first"><input type="button" value="2nd" onclick="funcbtn2()" class="tag_btn btn_second"><input type="button" value="3rd" onclick="funcbtn3()" class="tag_btn btn_third">';
      document.getElementById('goals').innerHTML=' <p class="third_goal">3rd：②、③のパターンでもFUSIONしてみよう！</p>';
       document.getElementById("text_mark").style.borderColor = "#3FC6E3" ;
@@ -187,7 +229,11 @@ alert('そのたんごは　まだFUSION　できないみたい');
     document.getElementById('secret').innerHTML = document.getElementById('preenter').innerHTML;
     document.getElementById('tag_lists').innerHTML = '<form name="zzzzzzz"><input type="button" value="1st" onclick="funcbtn1()" class="tag_btn btn_first"><input type="button" value="2nd" onclick="funcbtn2()" class="tag_btn btn_second"><input type="button" value="3rd" onclick="funcbtn3()" class="tag_btn btn_third"><input type="button" value="4th" onclick="funcbtn4()" class="tag_btn btn_forth">';
     document.getElementById('goals').innerHTML='  <p class="forth_goal">4th：パネルを切って新しいパネルにしよう！</p>';
-    document.getElementById('blnc').innerHTML = '<form name="forth_check" onsubmit="return abc()"><input type="button" value="FUSION MACHINEをつかう" onclick="funcnottrans()" id="go_fusionbtn"><input type="text" id="forth_ans1" placeholder="1つめのこたえ" autocomplete="off"><input type="text" id="forth_ans2"　 placeholder="2つめのこたえ" autocomplete="off"><input type="button" value="GO!" onclick="func4()" class="forth_check_btn">';
+      if(document.getElementById('text_mark').clientWidth == size_num){
+      document.getElementById('blnc').innerHTML = '<form name="forth_check" onsubmit="return abc()"><input type="button" value="FUSION MACHINE" onclick="funcnottrans()" id="go_fusionbtn"><input type="text" id="forth_ans1" placeholder="1つめのこたえ" autocomplete="off"><input type="text" id="forth_ans2"　 placeholder="2つめのこたえ" autocomplete="off"><input type="button" value="GO!" onclick="func4()" class="forth_check_btn">';
+      }else{
+      document.getElementById('blnc').innerHTML = '<form name="forth_check" onsubmit="return abc()"><input type="button" value="FUSION MACHINEをつかう" onclick="funcnottrans()" id="go_fusionbtn"><input type="text" id="forth_ans1" placeholder="1つめのこたえ" autocomplete="off"><input type="text" id="forth_ans2"　 placeholder="2つめのこたえ" autocomplete="off"><input type="button" value="GO!" onclick="func4()" class="forth_check_btn">';
+      }
     document.getElementById("text_mark").style.borderColor = "#565EFE" ;
   }
 }
@@ -204,7 +250,11 @@ function func4(){
       document.getElementById("third_text_final").style.display = "none" ;
       document.getElementById("forth_text_final").style.display = "none" ;
       document.getElementById("fifth_text_final").style.display = "block" ;
-       document.getElementById('blnc').innerHTML = '<form name="fusion_machine" onsubmit="return abc()"><input type="button" value="FUSION MACHINEをつかう" onclick="functrans()" id="go_fusionbtn">  <div class="conn"><input type="button" id="connection" value="せつぞく" onclick="funclast1()"><div class="conn1" id="conn1" onclick="funclast1()"></div><div class="conn2" id="conn2" onclick="funclast1()"></div></div></form>';
+      if(document.getElementById('text_mark').clientWidth == size_num){
+      document.getElementById('blnc').innerHTML = '<form name="fusion_machine" onsubmit="return abc()"><input type="button" value="FUSION MACHINE" onclick="functrans()" id="go_fusionbtn">  <div class="conn"><input type="button" id="connection" value="せつぞく" onclick="funclast1()"><div class="conn1" id="conn1" onclick="funclast1()"></div><div class="conn2" id="conn2" onclick="funclast1()"></div></div></form>';
+      }else{
+      document.getElementById('blnc').innerHTML = '<form name="fusion_machine" onsubmit="return abc()"><input type="button" value="FUSION MACHINEをつかう" onclick="functrans()" id="go_fusionbtn">  <div class="conn"><input type="button" id="connection" value="せつぞく" onclick="funclast1()"><div class="conn1" id="conn1" onclick="funclast1()"></div><div class="conn2" id="conn2" onclick="funclast1()"></div></div></form>';
+      }
       document.getElementById('tag_lists').innerHTML = '<form name="zzzzzzz"><input type="button" value="1st" onclick="funcbtn1()" class="tag_btn btn_first"><input type="button" value="2nd" onclick="funcbtn2()" class="tag_btn btn_second"><input type="button" value="3rd" onclick="funcbtn3()" class="tag_btn btn_third"><input type="button" value="4th" onclick="funcbtn4()" class="tag_btn btn_forth"><input type="button" value="5th" onclick="funcbtn5()" class="tag_btn btn_fifth">';
       document.getElementById('goals').innerHTML='<p class="fifth_goal">LAST：なんとかして初期化を阻止しよう！</p>';
           document.getElementById("text_mark").style.borderColor = "#D463F9 " ;
@@ -454,3 +504,4 @@ function funclast2(){
 function functest(){
   alert('アイウエオ');
 }
+
