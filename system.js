@@ -508,4 +508,3 @@ function funclast2(){
 function functest(){
   alert('アイウエオ');
 }
-
