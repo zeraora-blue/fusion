@@ -498,6 +498,7 @@ body{
   letter-spacing: 0px;
   color: #675555;
 	background-color: #FFFFFF;
+	  	font-weight: 500;
   }
 
   .secret_background{
@@ -518,6 +519,7 @@ body{
     position:relative;
    top:0px;
    left:0px;
+	  	font-weight: 500;
   }
 
   button{
@@ -588,6 +590,7 @@ background: #FFFFFF 0% 0% no-repeat padding-box;
 border: 5px solid #A6EF48;
 border-radius: 17px;
 opacity: 1;
+	  	font-weight: 500;
   }
 
   .text_box div{
