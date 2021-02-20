@@ -450,7 +450,7 @@
 	display:none;
 }
   b{
-  font: normal normal bold 24px/32px Yu Gothic cusb;
+  font: normal normal bold 14px/20px Yu Gothic cusb;
   }
 
   input {
@@ -482,14 +482,15 @@
 	color:red;
   }
   #first_ans{
-    width: 300px;
-    height: 35px;
+    width: 200px;
+    height: 20px;
     border-radius: 0px;
     border: 2px solid #9D9D9D;
     text-align:center;
-  font: normal normal bold 30px/32px Yu Gothic cus;
+  font: normal normal bold 14px/20px Yu Gothic cus;
   letter-spacing: 0px;
   color: #675555;
+	background-color: #FFFFFF;
   }
 
   .secret_background{
@@ -499,16 +500,16 @@
   }
   .confirm_btn{
     text-align:center;
-  font: normal normal bold 30px/32px Yu Gothic cus;
+  font: normal normal bold 14px/20px Yu Gothic cus;
   letter-spacing: 0px;
   color: #675555;
-    width: 100px;
-    height: 100px;
-    border-radius: 100%;
+    width: 60px;
+    height: 30px;
+    border-radius: 5px;
     border: 2px solid #9D9D9D;
-    position:absolute;
-   top:70px;
-   left:110px;
+    position:relative;
+   top:0px;
+   left:0px;
   }
 
   button{
@@ -659,8 +660,8 @@ opacity: 1;
 
   .input_blanc{
     position:relative;
-    top:300px;
-    left:730px;
+    top:500px;
+    left:40px;
   }
 
   .veil{
@@ -852,4 +853,5 @@ opacity: 1;
   }
 
 }
+
 
