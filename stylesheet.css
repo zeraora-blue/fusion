@@ -17,7 +17,9 @@
 		src: url(font/SourceHanSans-Medium_min.otf);
 		font-weight: 500;
 	}
-
+body{
+	font-weight: 500;
+}
   .reflect{
     position:absolute;
     bottom:0px;
@@ -26,6 +28,7 @@
   }
   b{
   font: normal normal bold 24px/32px Yu Gothic cusb;
+	font-weight: 800;
   }
 
   input {
@@ -449,8 +452,12 @@
 .reflect{
 	display:none;
 }
+body{
+	font-weight: 500;
+}
   b{
   font: normal normal bold 14px/20px Yu Gothic cusb;
+	font-weight: 800;
   }
 
   input {
@@ -758,7 +765,7 @@ opacity: 1;
   }
 
   #go_fusionbtn{
-	  	padding:0px;
+		padding:0px;
 		margin:0px;
 		width: 110px;
 		height: 36px;
