@@ -38,7 +38,7 @@ window.onload = function(){
     document.getElementById("fifth_text_final").innerHTML = 'なるほど！　そのふたつのパネルが　<br>てに　はいったんだね！'
       +'<br>ん？てがみに　まだ　なにか　かいてあるみたい。<br>'
       +'<br>...ただし　あくよう　されないように'
-      +'<br>「FUSION MACHINE」は　パネルの　きりはなしを'
+      +'<br>「FUSION MACHINE」は　パネルのきりはなしを'
       +'<br>さっちして しょきかプログラムが　きどうする　<br>せっていに　なっている　から'
       +'<br>かってに　きりはなさない　ように！'
       +'<br>もし　きりはなして　しまったら'
@@ -48,7 +48,7 @@ window.onload = function(){
       +'<br>たいへんだ！　しょきか　なんてしたら'
       +'<br>はかせに　おこられちゃうよ...。'
       +'<br>'
-      +'<br>さいわい　まだ　データに　けつ<span id="like">じょ</span>は　ないみたい...。'
+      +'<br>さいわい　まだデータに　けつ<span id="like">じょ</span>はないみたい。'
       +'<br>なんとかして　ぼくの　このボタンを　おしてくれ！'
     }
 }
