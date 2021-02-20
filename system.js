@@ -265,7 +265,11 @@ function func4(){
       document.getElementById("third_text_final").style.display = "none" ;
       document.getElementById("forth_text_final").style.display = "none" ;
       document.getElementById("fifth_text_final").style.display = "block" ;
-       document.getElementById('blnc').innerHTML = '<form name="fusion_machine" onsubmit="return abc()"><input type="button" value="FUSION MACHINEをつかう" onclick="functrans()" id="go_fusionbtn">    <div class="conn"><input type="button" id="connection" value="せつぞく" onclick="funclast1()"><div class="conn1" id="conn1" onclick="funclast1()"></div><div class="conn2" id="conn2" onclick="funclast1()"></div></div></form>';
+      if(document.getElementById('text_mark').clientWidth == size_num){
+      document.getElementById('blnc').innerHTML = '<form name="fusion_machine" onsubmit="return abc()"><input type="button" value="FUSION MACHINE" onclick="functrans()" id="go_fusionbtn">  <div class="conn"><input type="button" id="connection" value="せつぞく" onclick="funclast1()"><div class="conn1" id="conn1" onclick="funclast1()"></div><div class="conn2" id="conn2" onclick="funclast1()"></div></div></form>';
+      }else{
+      document.getElementById('blnc').innerHTML = '<form name="fusion_machine" onsubmit="return abc()"><input type="button" value="FUSION MACHINEをつかう" onclick="functrans()" id="go_fusionbtn">  <div class="conn"><input type="button" id="connection" value="せつぞく" onclick="funclast1()"><div class="conn1" id="conn1" onclick="funclast1()"></div><div class="conn2" id="conn2" onclick="funclast1()"></div></div></form>';
+      }
       document.getElementById('tag_lists').innerHTML = '<form name="zzzzzzz"><input type="button" value="1st" onclick="funcbtn1()" class="tag_btn btn_first"><input type="button" value="2nd" onclick="funcbtn2()" class="tag_btn btn_second"><input type="button" value="3rd" onclick="funcbtn3()" class="tag_btn btn_third"><input type="button" value="4th" onclick="funcbtn4()" class="tag_btn btn_forth"><input type="button" value="5th" onclick="funcbtn5()" class="tag_btn btn_fifth">';
       document.getElementById('goals').innerHTML='<p class="fifth_goal">LAST：なんとかして初期化を阻止しよう！</p>';
           document.getElementById("text_mark").style.borderColor = "#D463F9 " ;
