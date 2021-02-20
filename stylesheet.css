@@ -528,7 +528,7 @@
 		outline: none;
 		padding: 0;
 		appearance: none;
-font: normal normal bold 20px/29px Source Han Sans JP;
+font: normal normal bold 20px/29px Source Han Sans JP cus;
 letter-spacing: 0px;
 color: #FFFFFF;
 opacity: 1;
@@ -567,7 +567,7 @@ border-radius: 13px;
     top:100px;
     left:5px;
 		text-align: left;
-		font: normal normal bold 12px/20px Yu Gothic;
+		font: normal normal bold 12px/20px Yu Gothic cus;
 		letter-spacing: 0px;
   color: #675555;
   display:table;
@@ -617,7 +617,7 @@ opacity: 1;
 		background: #4C5BE2B3 0% 0% no-repeat padding-box;
 		opacity: 1;
 		text-align: left;
-		font: normal normal bold 15px/21px Source Han Sans JP;
+		font: normal normal bold 15px/21px Source Han Sans JP cus;
 		letter-spacing: 0px;
 		color: #FFFFFF;
 		opacity: 1;
@@ -852,3 +852,4 @@ opacity: 1;
   }
 
 }
+
