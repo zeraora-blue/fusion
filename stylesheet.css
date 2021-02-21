@@ -759,6 +759,8 @@ opacity: 1;
     top: 120px;
     left: 115px;
 		background-color:#FFFFFF;
+		padding:0px;
+		margin:0px;
   }
 
   .cancel{
