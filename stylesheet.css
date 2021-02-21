@@ -458,6 +458,10 @@ body,html{
 	height:730px;
 	margin:0 auto;
 }
+	body{
+	box-sizing: border-box;
+margin:     0;
+}
   b{
   font: normal normal bold 14px/20px Yu Gothic cusb;
 	font-weight: 800;
