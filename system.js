@@ -8,6 +8,12 @@ const size_num = 340;
 
 window.onload = function(){
   if(document.getElementById('text_mark').clientWidth == size_num){
+    var screen_size_num = screen.width;
+    var zoom_num = screen_size_num / 400;
+    if(zoom_num < 1){
+    document.getElementById("body").style.zoom = zoom_num;
+    document.getElementById("html").style.zoom = zoom_num;
+  }
     document.getElementById("first_text_final").innerHTML = 'ぼくは　エーアイの　<span id="me1">ご</span>ろう　だ。<br>'
     +'<br>きょうは　この　そうちを　はじめて　つかう　ひ！<br>'
     +'<br>きみが　しようしゃ　だいいちごうに'
