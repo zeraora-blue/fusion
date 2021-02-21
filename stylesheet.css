@@ -451,8 +451,11 @@
 .reflect{
 	display:none;
 }
-body{
+body,html{
 	font-weight: 500;
+	width: 400px;
+	height:730px;
+	margin:0 auto;
 }
   b{
   font: normal normal bold 14px/20px Yu Gothic cusb;
@@ -502,6 +505,7 @@ body{
   .secret_background{
     position:relative;
     width:400px;
+		height:730px;
   margin: 0 auto;
   }
   .confirm_btn{
@@ -676,7 +680,7 @@ opacity: 1;
 
   .veil{
 		width:400px;
-    height:1100px;
+    height:730px;
     position:absolute;
     top:0;
     left:0;
